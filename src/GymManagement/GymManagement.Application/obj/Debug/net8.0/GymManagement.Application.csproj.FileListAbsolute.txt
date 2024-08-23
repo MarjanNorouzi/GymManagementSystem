@@ -1,0 +1,15 @@
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\bin\Debug\net8.0\GymManagement.Application.deps.json
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\bin\Debug\net8.0\GymManagement.Application.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\bin\Debug\net8.0\GymManagement.Application.pdb
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\bin\Debug\net8.0\GymManagement.Domain.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\bin\Debug\net8.0\GymManagement.Domain.pdb
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\obj\Debug\net8.0\GymManagement.Application.csproj.AssemblyReference.cache
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\obj\Debug\net8.0\GymManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\obj\Debug\net8.0\GymManagement.Application.AssemblyInfoInputs.cache
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\obj\Debug\net8.0\GymManagement.Application.AssemblyInfo.cs
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\obj\Debug\net8.0\GymManagement.Application.csproj.CoreCompileInputs.cache
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\obj\Debug\net8.0\GymManag.E831DFE7.Up2Date
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\obj\Debug\net8.0\GymManagement.Application.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\obj\Debug\net8.0\refint\GymManagement.Application.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\obj\Debug\net8.0\GymManagement.Application.pdb
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement\GymManagement.Application\obj\Debug\net8.0\ref\GymManagement.Application.dll
