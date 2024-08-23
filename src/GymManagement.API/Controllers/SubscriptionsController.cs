@@ -17,8 +17,8 @@ public class SubscriptionsController(
         var command = new CreateSubscriptionCommand(request.SubscriptionType.ToString(), request.AdminId);
         var result = await sender.Send(command);
 
-        return result.MatchFirst(guid =>
-        Ok(new CreateSubscriptionResponse(guid, request.SubscriptionType)),
+        return result.MatchFirst(subscription =>
+        Ok(new CreateSubscriptionResponse(subscription.Id, request.SubscriptionType)),
         error => Problem());
     }
 }

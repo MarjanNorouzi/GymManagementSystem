@@ -63,3 +63,9 @@ C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\obj\Debug\
 C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\obj\Debug\net8.0\GymManagement.API.pdb
 C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\obj\Debug\net8.0\GymManagement.API.genruntimeconfig.cache
 C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\obj\Debug\net8.0\ref\GymManagement.API.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\bin\Debug\net8.0\ErrorOr.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\bin\Debug\net8.0\MediatR.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\bin\Debug\net8.0\GymManagement.Infrastructure.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\bin\Debug\net8.0\GymManagement.Infrastructure.pdb
