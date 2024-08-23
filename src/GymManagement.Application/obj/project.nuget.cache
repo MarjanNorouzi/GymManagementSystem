@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "iXpFKRo9LSU=",
+  "dgSpecHash": "m5UoB888JI8=",
   "success": true,
   "projectFilePath": "C:\\Users\\marja\\source\\repos\\GymManagementSystem\\src\\GymManagement.Application\\GymManagement.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\marja\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

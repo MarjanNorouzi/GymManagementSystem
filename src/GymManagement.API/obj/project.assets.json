@@ -2,11 +2,28 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "GymManagement.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "GymManagement.Domain": "1.0.0"
+          "GymManagement.Domain": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
         },
         "compile": {
           "bin/placeholder/GymManagement.Application.dll": {}
@@ -34,10 +51,55 @@
         "runtime": {
           "bin/placeholder/GymManagement.Domain.dll": {}
         }
+      },
+      "GymManagement.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "GymManagement.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GymManagement.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GymManagement.Infrastructure.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
+      "sha512": "fGLiCRLMYd00JYpClraLjJTNKLmMJPnqxMaiRzEBIIvevlzxz33mXy39Lkd48hu1G+N21S7QpaO5ZzKsI6FRuA==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "GymManagement.Application/1.0.0": {
       "type": "project",
       "path": "../GymManagement.Application/GymManagement.Application.csproj",
@@ -52,12 +114,18 @@
       "type": "project",
       "path": "../GymManagement.Domain/GymManagement.Domain.csproj",
       "msbuildProject": "../GymManagement.Domain/GymManagement.Domain.csproj"
+    },
+    "GymManagement.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../GymManagement.Infrastructure/GymManagement.Infrastructure.csproj",
+      "msbuildProject": "../GymManagement.Infrastructure/GymManagement.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "GymManagement.Application >= 1.0.0",
-      "GymManagement.Contracts >= 1.0.0"
+      "GymManagement.Contracts >= 1.0.0",
+      "GymManagement.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -98,6 +166,9 @@
             },
             "C:\\Users\\marja\\source\\repos\\GymManagementSystem\\src\\GymManagement.Contracts\\GymManagement.Contracts.csproj": {
               "projectPath": "C:\\Users\\marja\\source\\repos\\GymManagementSystem\\src\\GymManagement.Contracts\\GymManagement.Contracts.csproj"
+            },
+            "C:\\Users\\marja\\source\\repos\\GymManagementSystem\\src\\GymManagement.Infrastructure\\GymManagement.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\marja\\source\\repos\\GymManagementSystem\\src\\GymManagement.Infrastructure\\GymManagement.Infrastructure.csproj"
             }
           }
         }
