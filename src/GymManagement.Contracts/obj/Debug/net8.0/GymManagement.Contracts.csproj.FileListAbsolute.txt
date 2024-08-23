@@ -1,0 +1,12 @@
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Contracts\bin\Debug\net8.0\GymManagement.Contracts.deps.json
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Contracts\bin\Debug\net8.0\GymManagement.Contracts.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Contracts\bin\Debug\net8.0\GymManagement.Contracts.pdb
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Contracts\obj\Debug\net8.0\GymManagement.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Contracts\obj\Debug\net8.0\GymManagement.Contracts.AssemblyInfoInputs.cache
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Contracts\obj\Debug\net8.0\GymManagement.Contracts.AssemblyInfo.cs
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Contracts\obj\Debug\net8.0\GymManagement.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Contracts\obj\Debug\net8.0\GymManagement.Contracts.sourcelink.json
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Contracts\obj\Debug\net8.0\GymManagement.Contracts.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Contracts\obj\Debug\net8.0\refint\GymManagement.Contracts.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Contracts\obj\Debug\net8.0\GymManagement.Contracts.pdb
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Contracts\obj\Debug\net8.0\ref\GymManagement.Contracts.dll

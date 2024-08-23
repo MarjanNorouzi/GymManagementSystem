@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GymManagement.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+276bafcecd827393e5aa97d4ec6bcb7847347b35")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f918cfcd3b9206abf5c572441743314a3245e40b")]
 [assembly: System.Reflection.AssemblyProductAttribute("GymManagement.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GymManagement.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
