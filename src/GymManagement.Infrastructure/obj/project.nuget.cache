@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "TFYQuc/XvoU=",
+  "dgSpecHash": "4NQIQBOnZ2M=",
   "success": true,
   "projectFilePath": "C:\\Users\\marja\\source\\repos\\GymManagementSystem\\src\\GymManagement.Infrastructure\\GymManagement.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\marja\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
+    "C:\\Users\\marja\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\marja\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
   ],
   "logs": []
