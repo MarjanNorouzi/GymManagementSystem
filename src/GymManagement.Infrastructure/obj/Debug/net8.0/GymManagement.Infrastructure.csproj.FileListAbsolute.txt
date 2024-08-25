@@ -33,3 +33,5 @@ C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Infrastructure
 C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Infrastructure\obj\Debug\net8.0\refint\GymManagement.Infrastructure.dll
 C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Infrastructure\obj\Debug\net8.0\GymManagement.Infrastructure.pdb
 C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Infrastructure\obj\Debug\net8.0\ref\GymManagement.Infrastructure.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Infrastructure\bin\Debug\net8.0\GymManagement.Infrastructure.runtimeconfig.json
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Infrastructure\obj\Debug\net8.0\GymManagement.Infrastructure.genruntimeconfig.cache

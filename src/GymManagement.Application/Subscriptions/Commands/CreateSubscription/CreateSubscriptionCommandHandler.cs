@@ -9,12 +9,13 @@ public class CreateSubscriptionCommandHandler(
     ISubscriptionsRepository subscriptionsRepository,
     IUnitOfWork unitOfWork) : IRequestHandler<CreateSubscriptionCommand, ErrorOr<Subscription>>
 {
-    public async Task<ErrorOr<Subscription>> Handle(CreateSubscriptionCommand request, CancellationToken cancellationToken)
+    public async Task<ErrorOr<Subscription>> Handle(CreateSubscriptionCommand command, CancellationToken cancellationToken)
     {
         // create a subscription
         var subscription = new Subscription
         {
-            Id = Guid.NewGuid()
+            Id = Guid.NewGuid(),
+            SubscriptionType = command.SubscriptionType
         };
 
         // add to database
