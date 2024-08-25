@@ -11,6 +11,9 @@ public class Subscription
         _maxGyms = 1;
     }
 
+    private Subscription()
+    { }
+
     public Guid Id { get; private set; }
     public SubscriptionType SubscriptionType { get; private set; } = null!;
     public Guid AdminId { get; }
@@ -38,7 +41,4 @@ public class Subscription
         nameof(SubscriptionType.Pro) => int.MaxValue,
         _ => throw new InvalidOperationException()
     };
-
-    private Subscription()
-    { }
 }
