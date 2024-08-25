@@ -11,12 +11,10 @@ public class SubscriptionConfiguration : IEntityTypeConfiguration<Subscription>
         builder.HasKey(x => x.Id);
 
         builder
-            .Property("_adminId")
-            .HasColumnName("AdminId");
-
-        builder
             .Property(x => x.Id)
             .ValueGeneratedNever();
+
+        builder.Property(s => s.AdminId);
 
         builder
             .Property(x => x.SubscriptionType)

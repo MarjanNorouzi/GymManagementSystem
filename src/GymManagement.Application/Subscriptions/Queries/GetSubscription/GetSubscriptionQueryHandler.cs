@@ -11,8 +11,8 @@ public class GetSubscriptionQueryHandler(ISubscriptionsRepository subscriptionsR
     {
         var subscription = await subscriptionsRepository.GetByIdAsync(query.SubscriptionId);
 
-        return subscription == null 
-            ? (ErrorOr<Subscription>)Error.NotFound("Subscriotion not found.") 
-            : (ErrorOr<Subscription>)subscription;
+        return subscription is null
+            ? Error.NotFound("Subscriotion not found.")
+            : subscription;
     }
 }

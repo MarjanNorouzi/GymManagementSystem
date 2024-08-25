@@ -7,12 +7,9 @@ namespace GymManagement.Infrastructure.Common.Persistence;
 
 public class GymManagementDbContext(DbContextOptions options) : DbContext(options), IUnitOfWork
 {
-    public DbSet<Subscription> Subscription { get; set; }
+    public DbSet<Subscription> Subscription { get; set; } = null!;
 
-    public async Task CommitChangeAsync()
-    {
-        await base.SaveChangesAsync();
-    }
+    public async Task CommitChangeAsync() => await base.SaveChangesAsync();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

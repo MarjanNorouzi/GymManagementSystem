@@ -1,4 +1,5 @@
 ﻿using GymManagement.Application.Subscriptions.Commands.CreateSubscription;
+using GymManagement.Application.Subscriptions.Commands.DeleteSubscription;
 using GymManagement.Application.Subscriptions.Queries.GetSubscription;
 using GymManagement.Contracts.Subscriptions;
 using MediatR;
@@ -36,7 +37,7 @@ public class SubscriptionsController(
         var result = await sender.Send(query);
 
         return result.MatchFirst(subscription =>
-        Ok(new SubscriptionResponse(subscription.Id, Enum.Parse<SubscriptionType>(subscription.SubscriptionType.Name))),
+        Ok(new SubscriptionResponse(subscription.Id, ToDto(subscription.SubscriptionType))),
         error => Problem(
             detail: error.Description,
             instance: null,
@@ -44,5 +45,26 @@ public class SubscriptionsController(
             title: error.Code,
             type: error.Type.ToString()
             ));
+    }
+
+    [HttpDelete("{subscriptionId:guid}")]
+    public async Task<IActionResult> DeleteSubscription(Guid subscriptionId)
+    {
+        var result = await sender.Send(new DeleteSubscriptionCommand(subscriptionId));
+
+        return result.Match<IActionResult>(
+            _ => NoContent(),
+            _ => Problem());
+    }
+
+    private static SubscriptionType ToDto(DomainSubscriptionType subscriptionType)
+    {
+        return subscriptionType.Name switch
+        {
+            nameof(DomainSubscriptionType.Free) => SubscriptionType.Free,
+            nameof(DomainSubscriptionType.Starter) => SubscriptionType.Starter,
+            nameof(DomainSubscriptionType.Pro) => SubscriptionType.Pro,
+            _ => throw new InvalidOperationException(),
+        };
     }
 }

@@ -2,19 +2,42 @@
 
 public class Subscription
 {
-    private readonly Guid _adminId;
-
+    private readonly int _maxGyms;
     public Subscription(SubscriptionType subscriptionType, Guid adminId, Guid? id = null)
     {
         Id = id ?? Guid.NewGuid();
-        _adminId = adminId;
+        AdminId = adminId;
         SubscriptionType = subscriptionType;
+        _maxGyms = 1;
     }
 
-    // we will use these in project so we don't make them 'private fields'
     public Guid Id { get; private set; }
+    public SubscriptionType SubscriptionType { get; private set; } = null!;
+    public Guid AdminId { get; }
 
-    public SubscriptionType SubscriptionType { get; private set; }
+    public int GetMaxGyms() => (SubscriptionType.Name) switch
+    {
+        nameof(SubscriptionType.Free) => 1,
+        nameof(SubscriptionType.Starter) => 1,
+        nameof(SubscriptionType.Pro) => 3,
+        _ => throw new InvalidOperationException()
+    };
+
+    public int GetMaxRooms() => (SubscriptionType.Name) switch
+    {
+        nameof(SubscriptionType.Free) => 1,
+        nameof(SubscriptionType.Starter) => 3,
+        nameof(SubscriptionType.Pro) => int.MaxValue,
+        _ => throw new InvalidOperationException()
+    };
+
+    public int GetMaxDailySessions() => SubscriptionType.Name switch
+    {
+        nameof(SubscriptionType.Free) => 4,
+        nameof(SubscriptionType.Starter) => int.MaxValue,
+        nameof(SubscriptionType.Pro) => int.MaxValue,
+        _ => throw new InvalidOperationException()
+    };
 
     private Subscription()
     { }
