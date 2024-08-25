@@ -21,3 +21,4 @@ C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Domain\obj\Deb
 C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Domain\obj\Debug\net8.0\refint\GymManagement.Domain.dll
 C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Domain\obj\Debug\net8.0\GymManagement.Domain.pdb
 C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Domain\obj\Debug\net8.0\ref\GymManagement.Domain.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.Domain\obj\Debug\net8.0\GymManagement.Domain.csproj.AssemblyReference.cache

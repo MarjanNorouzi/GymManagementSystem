@@ -165,3 +165,4 @@ C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\bin\Debug\
 C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\marja\source\repos\GymManagementSystem\src\GymManagement.API\bin\Debug\net8.0\Ardalis.SmartEnum.dll

@@ -12,11 +12,9 @@ public class CreateSubscriptionCommandHandler(
     public async Task<ErrorOr<Subscription>> Handle(CreateSubscriptionCommand command, CancellationToken cancellationToken)
     {
         // create a subscription
-        var subscription = new Subscription
-        {
-            Id = Guid.NewGuid(),
-            SubscriptionType = command.SubscriptionType
-        };
+        var subscription = new Subscription(
+            subscriptionType: command.SubscriptionType,
+            adminId: command.AdminId);
 
         // add to database
         await subscriptionsRepository.AddSubscriptionAsync(subscription);
