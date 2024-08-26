@@ -1179,7 +1179,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "ErrorOr": "2.0.1",
           "GymManagement.Domain": "1.0.0",
           "MediatR": "12.4.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
@@ -1205,7 +1204,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Ardalis.SmartEnum": "8.0.0"
+          "Ardalis.SmartEnum": "8.0.0",
+          "ErrorOr": "2.0.1"
         },
         "compile": {
           "bin/placeholder/GymManagement.Domain.dll": {}

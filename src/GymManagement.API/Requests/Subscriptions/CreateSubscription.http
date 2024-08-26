@@ -1,6 +1,6 @@
 # @host = http://localhost:5119
 @host = https://localhost:7232
-@adminId = 558B31BC-B546-4187-AC45-B247C3B37326
+@adminId = 3307892f-aa4a-425e-b807-84becae6d5cc
 @WebToken = DoesNotYetAdded
 
 

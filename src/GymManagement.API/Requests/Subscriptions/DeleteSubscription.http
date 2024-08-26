@@ -1,9 +1,9 @@
 @host = http://localhost:5119
 @host = https://localhost:7232
-//@subscriotionId = 92861a95-7cf6-432f-abbb-10b9500f92de
+@subscriotionId = 92861a95-7cf6-432f-abbb-10b9500f92de
 //@subscriotionId = 161c662c-c8eb-4130-b925-936775f4be6b
 //@subscriotionId = 13ba94c9-f7b7-423d-ac3d-04f6c8f05ec2
-@subscriotionId = 8069c874-e0d3-4557-9390-ea83ca626147
+//@subscriotionId = 8069c874-e0d3-4557-9390-ea83ca626147
 
 DELETE {{host}}/Subscriptions/{{subscriotionId}}
 Content-Type: application/json

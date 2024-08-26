@@ -1,0 +1,8 @@
+@host = http://localhost:5119
+@host = https://localhost:7232
+@gymId = 13ba94c9-f7b7-423d-ac3d-04f6c8f05ec2
+@subscriptionId = 13ba94c9-f7b7-423d-ac3d-04f6c8f05ec2
+
+DELETE {{host}}/subscriptions/{{subscriptionId}}/gyms/{{gymId}}
+Content-Type: application/json
+###

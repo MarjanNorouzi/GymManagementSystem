@@ -18,6 +18,7 @@ public class SubscriptionsRepository(GymManagementDbContext dbContext) : ISubscr
     public async Task<Subscription?> GetByAdminIdAsync(Guid adminId) =>
         await dbContext.Subscription
         .AsNoTracking()
+        //.Include(x => x.AdminId)
         .FirstOrDefaultAsync(x => x.AdminId == adminId);
 
     public async Task<Subscription?> GetByIdAsync(Guid id) =>

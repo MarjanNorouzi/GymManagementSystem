@@ -36,10 +36,41 @@ namespace GymManagement.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f567631f-51f5-4bb5-9459-4d579e45418f"),
+                            Id = new Guid("3307892f-aa4a-425e-b807-84becae6d5cc"),
                             SubscriptionId = new Guid("92861a95-7cf6-432f-abbb-10b9500f92de"),
-                            UserId = new Guid("30047dbd-a9e7-414e-829c-cb2eabced877")
+                            UserId = new Guid("d0bc2dcd-5a4b-479c-8dfa-0bfb7aea78dd")
                         });
+                });
+
+            modelBuilder.Entity("GymManagement.Domain.Gyms.Gym", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("SubscriptionId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("_maxRooms")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("MaxRooms");
+
+                    b.Property<string>("_roomIds")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("RoomIds");
+
+                    b.Property<string>("_trainerIds")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("TrainerIds");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Gym");
                 });
 
             modelBuilder.Entity("GymManagement.Domain.Subscriptions.Subscription", b =>

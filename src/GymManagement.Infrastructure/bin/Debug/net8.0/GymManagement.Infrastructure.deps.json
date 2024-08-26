@@ -748,7 +748,6 @@
       "System.Threading.Channels/6.0.0": {},
       "GymManagement.Application/1.0.0": {
         "dependencies": {
-          "ErrorOr": "2.0.1",
           "GymManagement.Domain": "1.0.0",
           "MediatR": "12.4.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
@@ -759,7 +758,8 @@
       },
       "GymManagement.Domain/1.0.0": {
         "dependencies": {
-          "Ardalis.SmartEnum": "8.0.0"
+          "Ardalis.SmartEnum": "8.0.0",
+          "ErrorOr": "2.0.1"
         },
         "runtime": {
           "GymManagement.Domain.dll": {}
