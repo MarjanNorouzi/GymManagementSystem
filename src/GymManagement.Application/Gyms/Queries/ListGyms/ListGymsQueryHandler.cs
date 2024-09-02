@@ -1,7 +1,4 @@
-﻿using ErrorOr;
-using GymManagement.Application.Common.Interfaces;
-using GymManagement.Domain.Gyms;
-using MediatR;
+﻿using GymManagement.Domain.Gyms;
 
 namespace GymManagement.Application.Gyms.Queries.ListGyms;
 

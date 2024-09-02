@@ -1,6 +1,4 @@
-﻿using ErrorOr;
-using GymManagement.Domain.Gyms;
-using MediatR;
+﻿using GymManagement.Domain.Gyms;
 
 namespace GymManagement.Application.Gyms.Commands.CreateGym;
 

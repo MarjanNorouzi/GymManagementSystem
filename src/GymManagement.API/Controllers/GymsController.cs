@@ -1,4 +1,5 @@
-﻿using GymManagement.Application.Gyms.Commands.CreateGym;
+﻿using GymManagement.Application.Gyms.Commands.AddTrainer;
+using GymManagement.Application.Gyms.Commands.CreateGym;
 using GymManagement.Application.Gyms.Commands.DeleteGym;
 using GymManagement.Application.Gyms.Queries.GetGym;
 using GymManagement.Application.Gyms.Queries.ListGyms;
@@ -53,5 +54,17 @@ public class GymsController(ISender sender) : ControllerBase
         return result.Match(
             g => Ok(new GymResponse(g.Id, g.Name)),
             _ => Problem());
+    }
+
+    [HttpPost("{gymId:Guid}/trainers")]
+    public async Task<IActionResult> AddTrainer(AddTrainerRequest request, Guid subscriptionId, Guid gymId)
+    {
+        var command = new AddTrainerCommand(subscriptionId, gymId, request.TrainerId);
+
+        var result = await sender.Send(command);
+
+        return result.MatchFirst<IActionResult>(
+            success => Ok(),
+            error => Problem());
     }
 }

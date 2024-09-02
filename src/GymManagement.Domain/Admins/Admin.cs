@@ -10,9 +10,9 @@ public class Admin
 
     public Admin(Guid userId, Guid? subscriptionId, Guid? id = null)
     {
+        Id = id ?? Guid.NewGuid();
         UserId = userId;
         SubscriptionId = subscriptionId;
-        Id = id ?? Guid.NewGuid();
     }
 
     private Admin()

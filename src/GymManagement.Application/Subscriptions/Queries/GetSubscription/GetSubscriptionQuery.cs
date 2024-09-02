@@ -1,6 +1,4 @@
-﻿using ErrorOr;
-using GymManagement.Domain.Subscriptions;
-using MediatR;
+﻿using GymManagement.Domain.Subscriptions;
 
 namespace GymManagement.Application.Subscriptions.Queries.GetSubscription;
 
