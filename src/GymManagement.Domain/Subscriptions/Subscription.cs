@@ -27,14 +27,14 @@ public class Subscription
     {
         if (_gymIds.Contains(gym.Id)) throw new InvalidOperationException("Subscription already subscribe this gym.");
 
-        if (_gymIds.Count >= _maxGyms) throw new InvalidOperationException("Can't Have More Gyms Than Subscription Allows.");
+        if (_gymIds.Count >= _maxGyms) return SubscriptionErrors.CannotHaveMoreGymsThanTheSubscriptionAllows;
 
         _gymIds.Add(gym.Id);
 
         return Result.Success;
     }
 
-    public int GetMaxGyms() => (SubscriptionType.Name) switch
+    public int GetMaxGyms() => SubscriptionType.Name switch
     {
         nameof(SubscriptionType.Free) => 1,
         nameof(SubscriptionType.Starter) => 1,
@@ -42,7 +42,7 @@ public class Subscription
         _ => throw new InvalidOperationException()
     };
 
-    public int GetMaxRooms() => (SubscriptionType.Name) switch
+    public int GetMaxRooms() => SubscriptionType.Name switch
     {
         nameof(SubscriptionType.Free) => 1,
         nameof(SubscriptionType.Starter) => 3,
@@ -63,7 +63,7 @@ public class Subscription
     public void RemoveGym(Guid gymId)
     {
         if (!_gymIds.Contains(gymId)) throw new InvalidOperationException("Subscription doesn't subscribe this gym.");
-    
+
         _gymIds.Remove(gymId);
     }
 }

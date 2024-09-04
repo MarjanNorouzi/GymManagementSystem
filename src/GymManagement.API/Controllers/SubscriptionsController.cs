@@ -12,7 +12,7 @@ namespace GymManagement.API.Controllers;
 [Route("[controller]")]
 public class SubscriptionsController(
     // we can use 'IMediator' but better to use smaller interfaces 
-    ISender sender) : ControllerBase
+    ISender sender) : ApiController
 {
     [HttpPost]
     public async Task<IActionResult> CreateSubscription(CreateSubscriptionRequest request)
@@ -26,7 +26,7 @@ public class SubscriptionsController(
 
         return result.MatchFirst(subscription =>
         Ok(new SubscriptionResponse(subscription.Id, request.SubscriptionType)),
-        error => Problem());
+        Problem);
     }
 
     [HttpGet("{subscriptionId:guid}")]
@@ -38,13 +38,7 @@ public class SubscriptionsController(
 
         return result.MatchFirst(subscription =>
         Ok(new SubscriptionResponse(subscription.Id, ToDto(subscription.SubscriptionType))),
-        error => Problem(
-            detail: error.Description,
-            instance: null,
-            statusCode: null,
-            title: error.Code,
-            type: error.Type.ToString()
-            ));
+        Problem);
     }
 
     [HttpDelete("{subscriptionId:guid}")]
@@ -54,7 +48,7 @@ public class SubscriptionsController(
 
         return result.Match<IActionResult>(
             _ => NoContent(),
-            _ => Problem());
+            Problem);
     }
 
     private static SubscriptionType ToDto(DomainSubscriptionType subscriptionType)

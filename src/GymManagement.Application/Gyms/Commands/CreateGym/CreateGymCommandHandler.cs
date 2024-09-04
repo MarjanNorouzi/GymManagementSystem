@@ -10,7 +10,7 @@ public class CreateGymCommandHandler(
     public async Task<ErrorOr<Gym>> Handle(CreateGymCommand command, CancellationToken cancellationToken)
     {
         var subscription = await subscriptionsRepository.GetByIdAsync(command.SubscriptionId);
-        if (subscription == null) return Error.NotFound(description: "Subscription not found.");
+        if (subscription is null) return Error.NotFound(description: "Subscription not found.");
 
         var gym = new Gym(command.Name, subscription.GetMaxRooms(), subscription.Id);
 

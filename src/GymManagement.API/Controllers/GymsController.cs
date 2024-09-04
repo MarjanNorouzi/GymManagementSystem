@@ -9,10 +9,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GymManagement.API.Controllers;
 
-
 [ApiController]
 [Route("subscriptions/{subscriptionId:guid}/gyms/")]
-public class GymsController(ISender sender) : ControllerBase
+public class GymsController(ISender sender) : ApiController
 {
     [HttpPost]
     public async Task<IActionResult> CreateGym(CreateGymRequest request, Guid subscriptionId)
@@ -22,8 +21,8 @@ public class GymsController(ISender sender) : ControllerBase
         var result = await sender.Send(command);
 
         return result.Match(
-            Ok,
-            _ => Problem());
+            gym => CreatedAtAction(nameof(GetGym), new { subscriptionId, gym.Id }, new GymResponse(gym.Id, gym.Name)),
+            Problem);
     }
 
     [HttpDelete("{gymId:Guid}")]
@@ -33,7 +32,7 @@ public class GymsController(ISender sender) : ControllerBase
         var result = await sender.Send(command);
         return result.Match<IActionResult>(
             _ => NoContent(),
-            _ => Problem());
+            Problem);
     }
 
     [HttpGet]
@@ -43,7 +42,7 @@ public class GymsController(ISender sender) : ControllerBase
         var result = await sender.Send(query);
         return result.Match(
             g => Ok(g.Select(x => new GymResponse(x.Id, x.Name))),
-            _ => Problem());
+           Problem);
     }
 
     [HttpGet("{gymId:Guid}")]
@@ -53,7 +52,7 @@ public class GymsController(ISender sender) : ControllerBase
         var result = await sender.Send(query);
         return result.Match(
             g => Ok(new GymResponse(g.Id, g.Name)),
-            _ => Problem());
+            Problem);
     }
 
     [HttpPost("{gymId:Guid}/trainers")]
@@ -63,8 +62,8 @@ public class GymsController(ISender sender) : ControllerBase
 
         var result = await sender.Send(command);
 
-        return result.MatchFirst<IActionResult>(
+        return result.MatchFirst(
             success => Ok(),
-            error => Problem());
+            Problem);
     }
 }

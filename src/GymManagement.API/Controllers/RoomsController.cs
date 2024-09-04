@@ -1,3 +1,4 @@
+using GymManagement.API.Controllers;
 using GymManagement.Application.Rooms.Commands.CreateRoom;
 using GymManagement.Application.Rooms.Commands.DeleteRoom;
 using GymManagement.Contracts.Rooms;
@@ -8,7 +9,7 @@ namespace GymManagement.Api.Controllers;
 
 [ApiController]
 [Route("gyms/{gymId:guid}/rooms")]
-public class RoomsController(ISender sender) : ControllerBase
+public class RoomsController(ISender sender) : ApiController
 {
     [HttpPost]
     public async Task<IActionResult> CreateRoom(CreateRoomRequest request, Guid gymId)
@@ -19,7 +20,7 @@ public class RoomsController(ISender sender) : ControllerBase
 
         return createRoomResult.Match(
             room => Created($"rooms/{room.Id}", new RoomResponse(room.Id, room.Name)),
-            _ => Problem());
+            Problem);
     }
 
     [HttpDelete("{roomId:Guid}")]
@@ -31,6 +32,6 @@ public class RoomsController(ISender sender) : ControllerBase
 
         return deleteRoomResult.Match<IActionResult>(
             _ => NoContent(),
-            _ => Problem());
+            Problem);
     }
 }
