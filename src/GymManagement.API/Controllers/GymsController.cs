@@ -11,7 +11,7 @@ namespace GymManagement.API.Controllers;
 
 
 [ApiController]
-[Route("subscriptions/{subscriptionId:guid}/gyms")]
+[Route("subscriptions/{subscriptionId:guid}/gyms/")]
 public class GymsController(ISender sender) : ControllerBase
 {
     [HttpPost]

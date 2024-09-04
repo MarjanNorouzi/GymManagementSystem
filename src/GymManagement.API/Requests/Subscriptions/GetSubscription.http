@@ -1,9 +1,7 @@
 @host = http://localhost:5119
 @host = https://localhost:7232
-//@subscriotionId = 92861a95-7cf6-432f-abbb-10b9500f92de
-//@subscriotionId = 161c662c-c8eb-4130-b925-936775f4be6b
 @subscriotionId = 92861a95-7cf6-432f-abbb-10b9500f92de
-
+//@subscriotionId = 161c662c-c8eb-4130-b925-936775f4be6b
 
 GET {{host}}/Subscriptions/{{subscriotionId}}
 Content-Type: application/json

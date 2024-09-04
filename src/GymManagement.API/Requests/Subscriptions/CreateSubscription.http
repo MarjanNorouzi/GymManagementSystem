@@ -1,6 +1,7 @@
 # @host = http://localhost:5119
 @host = https://localhost:7232
-@adminId = 3307892f-aa4a-425e-b807-84becae6d5cc
+//@adminId = 3307892f-aa4a-425e-b807-84becae6d5cc
+@adminId = d27db9b6-1353-48f3-8e32-759e9a73f45c
 @WebToken = DoesNotYetAdded
 
 
@@ -9,7 +10,7 @@ Content-Type: application/json
 # Authorization: bearer {{WebToken}}
 
 {
-  "SubscriptionType": "Free",
+  "SubscriptionType": "Pro",
   "AdminId": "{{adminId}}"
 }
 ###
